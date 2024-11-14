@@ -1,0 +1,398 @@
+
+const chapternames = {
+    "chapters": [
+        {
+            "number": 1,
+            "name": "Arjuna Viṣāda Yoga",
+            "devanagari": "अर्जुन विषाद योग",
+            "translation": "The Yoga of Arjuna's Dejection",
+          "verses": [{
+            "verse_id": 1,
+            "text_sanskrit": "धृतराष्ट्र उवाच\n\nधर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः।\n\nमामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय।।",
+            "transliteration": "dhṛitarāśhtra uvācha\n\ndharma-kṣhetre kuru-kṣhetre samavetā yuyutsavaḥ\n\nmāmakāḥ pāṇḍavāśhchaiva kimakurvata sañjaya",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S01.mp3"
+        },
+        {
+            "verse_id": 2,
+            "text_sanskrit": "सञ्जय उवाच\n\nदृष्ट्वा तु पाण्डवानीकं व्यूढं दुर्योधनस्तदा।\n\nआचार्यमुपसंगम्य राजा वचनमब्रवीत्।।",
+            "transliteration": "sañjaya uvācha\n\ndṛiṣhṭvā tu pāṇḍavānīkaṁ vyūḍhaṁ duryodhanastadā\n\nāchāryamupasaṅgamya rājā vachanamabravīt",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S02.mp3"
+        },
+        {
+            "verse_id": 3,
+            "text_sanskrit": "पश्यैतां पाण्डुपुत्राणामाचार्य महतीं चमूम्।\n\nव्यूढां द्रुपदपुत्रेण तव शिष्येण धीमता।।",
+            "transliteration": "paśhyaitāṁ pāṇḍu-putrāṇām āchārya mahatīṁ chamūm\n\nvyūḍhāṁ drupada-putreṇa tava śhiṣhyeṇa dhīmatā",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S03.mp3"
+        },
+        {
+            "verse_id": 4,
+            "text_sanskrit": "Sanskrit text for verse 4\n\nContinued line for verse 4.",
+            "transliteration": "Transliteration for verse 4\n\nContinued transliteration for verse 4.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S04.mp3"
+        },
+        {
+            "verse_id": 5,
+            "text_sanskrit": "Sanskrit text for verse 5\n\nContinued line for verse 5.",
+            "transliteration": "Transliteration for verse 5\n\nContinued transliteration for verse 5.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S05.mp3"
+        },
+        {
+            "verse_id": 6,
+            "text_sanskrit": "Sanskrit text for verse 6\n\nContinued line for verse 6.",
+            "transliteration": "Transliteration for verse 6\n\nContinued transliteration for verse 6.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S06.mp3"
+        },
+        {
+            "verse_id": 7,
+            "text_sanskrit": "Sanskrit text for verse 7\n\nContinued line for verse 7.",
+            "transliteration": "Transliteration for verse 7\n\nContinued transliteration for verse 7.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S07.mp3"
+        },
+        {
+            "verse_id": 8,
+            "text_sanskrit": "Sanskrit text for verse 8\n\nContinued line for verse 8.",
+            "transliteration": "Transliteration for verse 8\n\nContinued transliteration for verse 8.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S08.mp3"
+        },
+        {
+            "verse_id": 9,
+            "text_sanskrit": "Sanskrit text for verse 9\n\nContinued line for verse 9.",
+            "transliteration": "Transliteration for verse 9\n\nContinued transliteration for verse 9.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S09.mp3"
+        },
+        {
+            "verse_id": 10,
+            "text_sanskrit": "Sanskrit text for verse 10\n\nContinued line for verse 10.",
+            "transliteration": "Transliteration for verse 10\n\nContinued transliteration for verse 10.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S10.mp3"
+        },
+        {
+            "verse_id": 11,
+            "text_sanskrit": "Sanskrit text for verse 11\n\nContinued line for verse 11.",
+            "transliteration": "Transliteration for verse 11\n\nContinued transliteration for verse 11.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S11.mp3"
+        },
+        {
+            "verse_id": 12,
+            "text_sanskrit": "Sanskrit text for verse 12\n\nContinued line for verse 12.",
+            "transliteration": "Transliteration for verse 12\n\nContinued transliteration for verse 12.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S12.mp3"
+        },
+        {
+            "verse_id": 13,
+            "text_sanskrit": "Sanskrit text for verse 13\n\nContinued line for verse 13.",
+            "transliteration": "Transliteration for verse 13\n\nContinued transliteration for verse 13.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S13.mp3"
+        },
+        {
+            "verse_id": 14,
+            "text_sanskrit": "Sanskrit text for verse 14\n\nContinued line for verse 14.",
+            "transliteration": "Transliteration for verse 14\n\nContinued transliteration for verse 14.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S14.mp3"
+        },
+        {
+            "verse_id": 15,
+            "text_sanskrit": "Sanskrit text for verse 15\n\nContinued line for verse 15.",
+            "transliteration": "Transliteration for verse 15\n\nContinued transliteration for verse 15.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S15.mp3"
+        },
+        {
+            "verse_id": 16,
+            "text_sanskrit": "Sanskrit text for verse 16\n\nContinued line for verse 16.",
+            "transliteration": "Transliteration for verse 16\n\nContinued transliteration for verse 16.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S16.mp3"
+        },
+        {
+            "verse_id": 17,
+            "text_sanskrit": "Sanskrit text for verse 17\n\nContinued line for verse 17.",
+            "transliteration": "Transliteration for verse 17\n\nContinued transliteration for verse 17.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S17.mp3"
+        },
+        {
+            "verse_id": 18,
+            "text_sanskrit": "Sanskrit text for verse 18\n\nContinued line for verse 18.",
+            "transliteration": "Transliteration for verse 18\n\nContinued transliteration for verse 18.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S18.mp3"
+        },
+        {
+            "verse_id": 19,
+            "text_sanskrit": "Sanskrit text for verse 19\n\nContinued line for verse 19.",
+            "transliteration": "Transliteration for verse 19\n\nContinued transliteration for verse 19.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S19.mp3"
+        },
+        {
+            "verse_id": 20,
+            "text_sanskrit": "Sanskrit text for verse 20\n\nContinued line for verse 20.",
+            "transliteration": "Transliteration for verse 20\n\nContinued transliteration for verse 20.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S20.mp3"
+        },
+        {
+            "verse_id": 21,
+            "text_sanskrit": "Sanskrit text for verse 21\n\nContinued line for verse 21.",
+            "transliteration": "Transliteration for verse 21\n\nContinued transliteration for verse 21.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S21.mp3"
+        },
+        {
+            "verse_id": 22,
+            "text_sanskrit": "Sanskrit text for verse 22\n\nContinued line for verse 22.",
+            "transliteration": "Transliteration for verse 22\n\nContinued transliteration for verse 22.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S22.mp3"
+        },
+        {
+            "verse_id": 23,
+            "text_sanskrit": "Sanskrit text for verse 23\n\nContinued line for verse 23.",
+            "transliteration": "Transliteration for verse 23\n\nContinued transliteration for verse 23.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S23.mp3"
+        },
+        {
+            "verse_id": 24,
+            "text_sanskrit": "Sanskrit text for verse 24\n\nContinued line for verse 24.",
+            "transliteration": "Transliteration for verse 24\n\nContinued transliteration for verse 24.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S24.mp3"
+        },
+        {
+            "verse_id": 25,
+            "text_sanskrit": "Sanskrit text for verse 25\n\nContinued line for verse 25.",
+            "transliteration": "Transliteration for verse 25\n\nContinued transliteration for verse 25.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S25.mp3"
+        },
+        {
+            "verse_id": 26,
+            "text_sanskrit": "Sanskrit text for verse 26\n\nContinued line for verse 26.",
+            "transliteration": "Transliteration for verse 26\n\nContinued transliteration for verse 26.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S26.mp3"
+        },
+        {
+            "verse_id": 27,
+            "text_sanskrit": "Sanskrit text for verse 27\n\nContinued line for verse 27.",
+            "transliteration": "Transliteration for verse 27\n\nContinued transliteration for verse 27.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S27.mp3"
+        },
+        {
+            "verse_id": 28,
+            "text_sanskrit": "Sanskrit text for verse 28\n\nContinued line for verse 28.",
+            "transliteration": "Transliteration for verse 28\n\nContinued transliteration for verse 28.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S28.mp3"
+        },
+        {
+            "verse_id": 29,
+            "text_sanskrit": "Sanskrit text for verse 29\n\nContinued line for verse 29.",
+            "transliteration": "Transliteration for verse 29\n\nContinued transliteration for verse 29.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S29.mp3"
+        },
+        {
+            "verse_id": 30,
+            "text_sanskrit": "Sanskrit text for verse 30\n\nContinued line for verse 30.",
+            "transliteration": "Transliteration for verse 30\n\nContinued transliteration for verse 30.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S30.mp3"
+        },
+        {
+            "verse_id": 31,
+            "text_sanskrit": "Sanskrit text for verse 31\n\nContinued line for verse 31.",
+            "transliteration": "Transliteration for verse 31\n\nContinued transliteration for verse 31.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S31.mp3"
+        },
+        {
+            "verse_id": 32,
+            "text_sanskrit": "Sanskrit text for verse 32\n\nContinued line for verse 32.",
+            "transliteration": "Transliteration for verse 32\n\nContinued transliteration for verse 32.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S32.mp3"
+        },
+        {
+            "verse_id": 33,
+            "text_sanskrit": "Sanskrit text for verse 33\n\nContinued line for verse 33.",
+            "transliteration": "Transliteration for verse 33\n\nContinued transliteration for verse 33.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S33.mp3"
+        },
+        {
+            "verse_id": 34,
+            "text_sanskrit": "Sanskrit text for verse 34\n\nContinued line for verse 34.",
+            "transliteration": "Transliteration for verse 34\n\nContinued transliteration for verse 34.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S34.mp3"
+        },
+        {
+            "verse_id": 35,
+            "text_sanskrit": "Sanskrit text for verse 35\n\nContinued line for verse 35.",
+            "transliteration": "Transliteration for verse 35\n\nContinued transliteration for verse 35.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S35.mp3"
+        },
+        {
+            "verse_id": 36,
+            "text_sanskrit": "Sanskrit text for verse 36\n\nContinued line for verse 36.",
+            "transliteration": "Transliteration for verse 36\n\nContinued transliteration for verse 36.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S36.mp3"
+        },
+        {
+            "verse_id": 37,
+            "text_sanskrit": "Sanskrit text for verse 37\n\nContinued line for verse 37.",
+            "transliteration": "Transliteration for verse 37\n\nContinued transliteration for verse 37.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S37.mp3"
+        },
+        {
+            "verse_id": 38,
+            "text_sanskrit": "Sanskrit text for verse 38\n\nContinued line for verse 38.",
+            "transliteration": "Transliteration for verse 38\n\nContinued transliteration for verse 38.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S38.mp3"
+        },
+        {
+            "verse_id": 39,
+            "text_sanskrit": "Sanskrit text for verse 39\n\nContinued line for verse 39.",
+            "transliteration": "Transliteration for verse 39\n\nContinued transliteration for verse 39.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S39.mp3"
+        },
+        {
+            "verse_id": 40,
+            "text_sanskrit": "Sanskrit text for verse 40\n\nContinued line for verse 40.",
+            "transliteration": "Transliteration for verse 40\n\nContinued transliteration for verse 40.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S40.mp3"
+        },
+        {
+            "verse_id": 41,
+            "text_sanskrit": "Sanskrit text for verse 41\n\nContinued line for verse 41.",
+            "transliteration": "Transliteration for verse 41\n\nContinued transliteration for verse 41.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S41.mp3"
+        },
+        {
+            "verse_id": 42,
+            "text_sanskrit": "Sanskrit text for verse 42\n\nContinued line for verse 42.",
+            "transliteration": "Transliteration for verse 42\n\nContinued transliteration for verse 42.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S42.mp3"
+        },
+        {
+            "verse_id": 43,
+            "text_sanskrit": "Sanskrit text for verse 43\n\nContinued line for verse 43.",
+            "transliteration": "Transliteration for verse 43\n\nContinued transliteration for verse 43.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S43.mp3"
+        },
+        {
+            "verse_id": 44,
+            "text_sanskrit": "Sanskrit text for verse 44\n\nContinued line for verse 44.",
+            "transliteration": "Transliteration for verse 44\n\nContinued transliteration for verse 44.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S44.mp3"
+        },
+        {
+            "verse_id": 45,
+            "text_sanskrit": "Sanskrit text for verse 45\n\nContinued line for verse 45.",
+            "transliteration": "Transliteration for verse 45\n\nContinued transliteration for verse 45.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S45.mp3"
+        },
+        {
+            "verse_id": 46,
+            "text_sanskrit": "Sanskrit text for verse 46\n\nContinued line for verse 46.",
+            "transliteration": "Transliteration for verse 46\n\nContinued transliteration for verse 46.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S46.mp3"
+        },
+        {
+            "verse_id": 47,
+            "text_sanskrit": "Sanskrit text for verse 47\n\nContinued line for verse 47.",
+            "transliteration": "Transliteration for verse 47\n\nContinued transliteration for verse 47.",
+            "url": "https://testapi1test.blob.core.windows.net/test/Indivl Shloka with Reps/Ch1S47.mp3"
+        }
+    ]},
+        {
+            "number": 2,
+            "name": "Sāṅkhya Yoga",
+            "devanagari": "सांख्य योग",
+            "translation": "Transcendental Knowledge",
+            "verses":{}
+        },
+        {
+            "number": 3,
+            "name": "Karma Yoga",
+            "devanagari": "कर्म योग",
+            "translation": "The Yoga of Action",
+        },
+        {
+            "number": 4,
+            "name": "Jñāna Karma Sannyāsa Yoga",
+            "devanagari": "ज्ञान कर्म संन्यास योग",
+            "translation": "The Yoga of Knowledge and Renunciation of Action",
+        },
+        {
+            "number": 5,
+            "name": "Karma Sannyāsa Yoga",
+            "devanagari": "कर्म संन्यास योग",
+            "translation": "The Yoga of Renunciation",
+        },
+        {
+            "number": 6,
+            "name": "Ātma Saṁyama Yoga",
+            "devanagari": "आत्म संयम योग",
+            "translation": "The Yoga of Self-Control",
+        },
+        {
+            "number": 7,
+            "name": "Jñāna Vijñāna Yoga",
+            "devanagari": "ज्ञान विज्ञान योग",
+            "translation": "The Yoga of Knowledge and Wisdom",
+        },
+        {
+            "number": 8,
+            "name": "Akṣara Brahma Yoga",
+            "devanagari": "अक्षर ब्रह्म योग",
+            "translation": "The Yoga of the Imperishable Absolute",
+        },
+        {
+            "number": 9,
+            "name": "Rāja Vidyā Rāja Guhya Yoga",
+            "devanagari": "राज विद्या राज गुह्य योग",
+            "translation": "The Yoga of Royal Knowledge and Royal Secret",
+        },
+        {
+            "number": 10,
+            "name": "Vibhūti Yoga",
+            "devanagari": "विभूति योग",
+            "translation": "The Yoga of Divine Glories",
+        },
+        {
+            "number": 11,
+            "name": "Viśvarūpa Darśana Yoga",
+            "devanagari": "विश्वरूप दर्शन योग",
+            "translation": "The Yoga of the Vision of the Universal Form",
+        },
+        {
+            "number": 12,
+            "name": "Bhakti Yoga",
+            "devanagari": "भक्ति योग",
+            "translation": "The Yoga of Devotion",
+        },
+        {
+            "number": 13,
+            "name": "Kṣetra Kṣetrajña Vibhāga Yoga",
+            "devanagari": "क्षेत्र क्षेत्रज्ञ विभाग योग",
+            "translation": "The Yoga of the Field and the Knower of the Field",
+        },
+        {
+            "number": 14,
+            "name": "Guṇa Traya Vibhāga Yoga",
+            "devanagari": "गुण त्रय विभाग योग",
+            "translation": "The Yoga of Division of the Three Gunas",
+        },
+        {
+            "number": 15,
+            "name": "Puruṣottama Yoga",
+            "devanagari": "पुरुषोत्तम योग",
+            "translation": "The Yoga of the Supreme Person",
+        },
+        {
+            "number": 16,
+            "name": "Daivāsura Sampad Vibhāga Yoga",
+            "devanagari": "दैवासुर सम्पद विभाग योग",
+            "translation":
+                "The Yoga of the Division between the Divine and the Demoniac",
+        },
+        {
+            "number": 17,
+            "name": "Śraddhā Traya Vibhāga Yoga",
+            "devanagari": "श्रद्धा त्रय विभाग योग",
+            "translation": "The Yoga of the Threefold Faith",
+        },
+        {
+            "number": 18,
+            "name": "Mokṣa Sannyāsa Yoga",
+            "devanagari": "मोक्ष संन्यास योग",
+            "translation": "The Yoga of Liberation and Renunciation",
+        },
+        
+    ],
+}
