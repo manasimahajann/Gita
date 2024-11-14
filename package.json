@@ -1,16 +1,17 @@
 {
-  "homepage": "https://manasimahajann.github.io/Gita/",
+  "homepage": "https://manasimahajann.github.io/Gita",
   "name": "gita",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+
   },
   "dependencies": {
     "react": "^18.3.1",
