@@ -11,6 +11,9 @@ function MusicHandler({url}) {
 	const [isPlaying, setIsPlaying] = useState(true)
 	const [isRepeating, setIsRepeating] = useState(false)
 
+	const [currentUrl, setCurrentUrl] = useState(url) // Track the current URL
+	const [isAudioReady, setIsAudioReady] = useState(false)
+
 	const onPlayBtnChange = () => setIsPlaying((prev) => !prev)
 	const onRepeatBtnChange = () => setIsRepeating((prev) => !prev)
 
@@ -34,20 +37,45 @@ function MusicHandler({url}) {
 		setIsPlaying(false)
 	}
 
+	// Effect for handling audio source change
 	useEffect(() => {
-		if (isPlaying) audioRef.current.play()
-		else audioRef.current.pause()
-	}, [isPlaying])
-
-	useEffect(() => {
-		if (audioRef.current) {
-			audioRef.current.pause()
-			audioRef.current.load()
-			setProgress(0)
-			if (isPlaying) audioRef.current.play()
+		if (url !== currentUrl) {
+			setCurrentUrl(url)
+			setIsAudioReady(false) // Reset readiness
 		}
 	}, [url])
 
+	// Effect to initialize the audio when the URL changes
+	useEffect(() => {
+		if (audioRef.current) {
+			audioRef.current.pause()
+			audioRef.current.src = currentUrl
+			audioRef.current.load() // Load the new audio source
+			setProgress(0)
+
+			audioRef.current.oncanplay = () => {
+				setIsAudioReady(true) // Set ready when the audio can play
+			}
+		}
+	}, [currentUrl])
+
+	// Effect for controlling playback
+	useEffect(() => {
+		const controlAudio = async () => {
+			if (audioRef.current) {
+				if (isPlaying && isAudioReady) {
+					try {
+						await audioRef.current.play()
+					} catch (err) {
+						console.error("Error during play:", err)
+					}
+				} else {
+					audioRef.current.pause()
+				}
+			}
+		}
+		controlAudio()
+	}, [isPlaying, isAudioReady])
 	return (
 		<div className="music-handler-container">
 			<audio

@@ -15,7 +15,7 @@ const Gita = () => {
 	}
 
 	return (
-		<>
+		<div className="flex flex-col items-center">
 			<LangauageBtns onLanguageChange={handleLanguageChange} />
 			{selectedChapter === null ? (
 				chapters.map((chapter, i) => (
@@ -41,7 +41,7 @@ const Gita = () => {
 					selectedLanguage={selectedLanguage}
 				/>
 			)}
-		</>
+		</div>
 	)
 }
 

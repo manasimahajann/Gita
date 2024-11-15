@@ -1,11 +1,15 @@
 import "./App.css"
 import Gita from "./Components/Gita"
+import React from "react"
+import {BrowserRouter, Routes, Route, useNavigate} from "react-router-dom"
 
 function App() {
 	return (
-		<div className="flex flex-col items-center">
-			<Gita />
-		</div>
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<Gita />} />
+			</Routes>
+		</BrowserRouter>
 	)
 }
 

@@ -1,17 +1,14 @@
 import React, {useEffect, useState} from "react"
 import MusicHandler from "./MusicHandler"
-import {FaArrowLeft} from "react-icons/fa6"
 import {MdKeyboardArrowLeft} from "react-icons/md"
 import {MdKeyboardArrowRight} from "react-icons/md"
-import {GiFlowerStar} from "react-icons/gi"
 import {MdKeyboardDoubleArrowRight} from "react-icons/md"
 import {MdKeyboardDoubleArrowLeft} from "react-icons/md"
 import all_verses from "../assets/total.json"
+import {useNavigate} from "react-router-dom"
 
 function Play({verse, selectedLanguage, verses_g}) {
-	const goToHome = () => {
-		window.location.reload() // Navigates to the Home component
-	}
+	const navigate = useNavigate()
 	const [verses, setVerses] = useState(verses_g)
 	const [chapterClick, setChapterClick] = useState(verses_g.chapter_id)
 
@@ -25,7 +22,15 @@ function Play({verse, selectedLanguage, verses_g}) {
 		)
 		setCurrentVerse(verseSelected)
 	}
-
+	useEffect(() => {
+		const handleBackButton = (event) => {
+			// Example: Navigate to home on back button press
+			navigate("/")
+		}
+		console.log("asdfad fasdddddddd")
+		window.addEventListener("popstate", handleBackButton)
+		return () => window.removeEventListener("popstate", handleBackButton)
+	}, [navigate])
 	useEffect(() => {
 		// Use filter to get an array of chapters that match the chapter ID
 		const newChapterArray = all_verses.filter(
