@@ -46,7 +46,7 @@ function MusicHandler({url}) {
 			setProgress(0)
 			if (isPlaying) audioRef.current.play()
 		}
-	}, [url, isPlaying])
+	}, [url])
 
 	return (
 		<div className="music-handler-container">
