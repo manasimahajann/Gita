@@ -2,9 +2,6 @@ import React from "react"
 import {FaArrowLeft} from "react-icons/fa"
 
 function LangauageBtns({onLanguageChange}) {
-	const goToHome = () => {
-		window.location.reload() // Navigates to the Home component
-	}
 	return (
 		<>
 			<div className="flex mb-2">
